@@ -1,3 +1,5 @@
+/* Globals Settings */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,11 +9,53 @@
 section, header, footer {
     width: 100%;
     padding-inline: 40px;
+    padding-block: 80px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+
+h1 {
+    font-family: Poppins;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 76.8px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+h2 {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+h3 {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51.2px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+h {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51.2px;
+    letter-spacing: -0.02em;
+}
+
+.content-container {
+    max-width: 1208px;
+    display: flex;
 }
 
 .yellow-highlight {
@@ -24,6 +68,10 @@ section, header, footer {
 
 .white-highlight {
     color: #fff;
+}
+
+.pink-highlight {
+    color: #FF3D9A;
 }
 
 .background-black {
@@ -48,13 +96,11 @@ section, header, footer {
 
 /* Header section */
 
-.header-section {
-    padding-block: 28px;
+#header-section {
+    padding-block: 20px;
 }
 
-.header-container {
-    max-width: 1208px;
-    display: flex;
+#header-container {
     gap: 85px;
 }
 
@@ -119,16 +165,17 @@ section, header, footer {
     gap: 8px;
 }
 
+/* Blackline separator */
+
+
 /* About Us Section */
 
-.us-section {
+#us-section {
     padding-top: 80px;
-    padding-bottom: 120px;
+    padding-bottom: 120px
 }
 
-.us-container {
-    max-width: 1208px;
-    display: flex;
+#us-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -138,15 +185,7 @@ section, header, footer {
 #us-item1 {
     display: flex;
     flex-direction: column;
-}
-
-h1 {
-    font-family: Poppins;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 76.8px;
-    letter-spacing: -0.02em;
-    text-align: left;
+    gap: 48px;
 }
 
 #us-description {
@@ -154,15 +193,6 @@ h1 {
     font-size: 24px;
     font-weight: 500;
     line-height: 38.4px;
-    text-align: left;
-}
-
-h3 {
-    font-family: Poppins;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 51.2px;
-    letter-spacing: -0.02em;
     text-align: left;
 }
 
@@ -192,29 +222,14 @@ h3 {
 
 /* Accomplished Section */
 
-.accomplished-section {
-    padding-block: 80px;
-}
 
-.accomplished-container {
-    max-width: 1208px;
-    display: flex;
+#accomplished-container {
     flex-direction: column;
     gap: 80px;
 }
 
 .accomplished-item1 {
     gap: 80px;
-}
-
-h2 {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 67.2px;
-    letter-spacing: -0.02em;
-    text-align: center;
 }
 
 .accomplished-item2 {
@@ -251,14 +266,8 @@ h2 {
 
 /* Donations Section */
 
-.donations-section {
-    padding-block: 80px;
-}
-
-.donations-container {
-    display: flex;
+#donations-container {
     flex-direction: column;
-    max-width: 1208px;
     gap: 80px;
 }
 
@@ -279,14 +288,6 @@ h2 {
     border-radius: 24px;
     opacity: 0px;
     gap: 0px;
-}
-
-h {
-    font-family: Poppins;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 51.2px;
-    letter-spacing: -0.02em;
 }
 
 .card-title-icon {
@@ -315,11 +316,8 @@ h {
 
 /* Adopt Section */
 
-.adopt-section {
-    padding-block: 80px
-}
-
-.adopt-container {
+#adopt-container {
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -367,14 +365,8 @@ h {
 
 /* Difference Section */
 
-.difference-section {
-    padding-block: 80px;
-}
-
-.difference-container {
-    display: flex;
+#difference-container {
     flex-direction: column;
-    max-width: 1208px;
     gap: 80px;
 }
 
@@ -388,6 +380,7 @@ h {
 .cards-diff-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -437,17 +430,74 @@ h {
     text-align: center;
 }
 
-/* Newsletter Section */
+/* Best friend section */
 
-.newsletter-section {
-    padding-block: 80px;
-}
-
-.newsletter-container {
+#best-friend-item {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    max-width: 1208px;
+}
+
+#best-friend-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    letter-spacing: -0.02em;
+}
+
+#best-friend-above-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+#above-title-text {
+    display: flex;
+    justify-content: center;
+}
+
+#best-friend-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+#best-friend-adoptables {
+    width: 238px;
+    height: 64px;
+    padding: 16px 32px;
+    border-radius: 32px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+}
+
+#best-friend-adopt {
+    width: 223px;
+    height: 64px;
+    padding: 16px 32px;
+    border-radius: 32px;
+    border: solid white 2px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+}
+
+
+/* Newsletter Section */
+
+#newsletter-container {
+    flex-direction: column;
+    gap: 60px;
 }
 
 #newsletter-text {
@@ -506,4 +556,62 @@ h {
     line-height: 32px;
     text-align: left;
     background-color: #fff;
+}
+
+/* Footer section */
+
+#footer-container {
+    flex-direction: column;
+    gap: 120px;
+}
+
+#footer-item1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.footer-column-texts {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+}
+
+#footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+#footer-medias {
+    gap: 20px;
+}
+
+#footer-item2 {
+    display: flex;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51.2px;
+    letter-spacing: -0.02em;
+    text-align: center;
 }
