@@ -53,8 +53,13 @@ h {
     letter-spacing: -0.02em;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .content-container {
     max-width: 1208px;
+    width: 100%;
     display: flex;
 }
 
@@ -97,11 +102,15 @@ h {
 /* Header section */
 
 #header-section {
-    padding-block: 20px;
+    padding-block: 0;
 }
 
 #header-container {
     gap: 85px;
+    justify-content: space-between;
+    border-bottom: solid black 2px;
+
+    padding-block: 28px;
 }
 
 .header-item1 {
@@ -372,23 +381,45 @@ h {
 
 .diff-item1 {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-wrap: wrap;
     align-content: space-around;
-    gap: 110px;
+    gap: 110px; */
+    position: relative;
+}
+
+.diff-item1 h2 {
+    max-width: 604px;
+}
+
+.diff-item1 > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.diff-item1 > img:first-child {
+    left: 10%;
+}
+
+.diff-item1 > img:last-child {
+    right: 10%;
 }
 
 .cards-diff-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
 }
 
 .card-diff-solo {
     display: flex;
-    flex: 1 2 0;
+    width: 272px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 48px 24px;
     border: solid white 2px;
     border-radius: 24px;
@@ -419,10 +450,15 @@ h {
 }
 
 .card-diff-button {
-    width: 224px;
+    width: 100%;
     height: 64px;
-    padding: 16px 24px;
+
+    /* padding: 16px 24px; */
+    padding-block: 16px;
     border-radius: 16px;
+    border: none;
+    cursor: pointer;
+
     font-family: Poppins;
     font-size: 20px;
     font-weight: 700;
@@ -431,6 +467,10 @@ h {
 }
 
 /* Best friend section */
+
+#best-friend-container{
+    justify-content: center;
+}
 
 #best-friend-item {
     display: flex;
@@ -468,10 +508,11 @@ h {
 }
 
 #best-friend-adoptables {
-    width: 238px;
-    height: 64px;
     padding: 16px 32px;
     border-radius: 32px;
+    border: none;
+    cursor: pointer;
+
     font-family: Poppins;
     font-size: 20px;
     font-weight: 700;
@@ -480,11 +521,11 @@ h {
 }
 
 #best-friend-adopt {
-    width: 223px;
-    height: 64px;
     padding: 16px 32px;
     border-radius: 32px;
     border: solid white 2px;
+    cursor: pointer;
+    
     font-family: Poppins;
     font-size: 20px;
     font-weight: 700;
@@ -534,9 +575,11 @@ h {
 #email-box-newsletter {
     width: 395px;
     height: 64px;
-    padding: 16px 136px 16px 24px;
+
+    padding: 16px 24px;
     border-radius: 32px;
     border: solid white 2px;
+
     font-family: Poppins;
     color: #fff;
     font-size: 20px;
@@ -545,11 +588,32 @@ h {
     text-align: left;
 }
 
+#email-box-newsletter::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* #best-friend-adoptables {
+    padding: 16px 32px;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+} */
+
 #subscribe-button-newsletter {
     width: 170px;
     height: 64px;
+
     padding: 16px 32px;
     border-radius: 32px;
+    border: none;
+    cursor: pointer;
+
     font-family: Poppins;
     font-size: 20px;
     font-weight: 700;
@@ -608,6 +672,10 @@ h {
 #footer-item2 {
     display: flex;
     justify-content: center;
+
+    border-top: solid black 2px;
+    padding-top: 60px;
+
     font-family: Poppins;
     font-size: 32px;
     font-weight: 700;
