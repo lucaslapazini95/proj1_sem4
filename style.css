@@ -683,3 +683,99 @@ h {
     letter-spacing: -0.02em;
     text-align: center;
 }
+
+/* Adoptables */
+
+#header-adoptables {
+    gap: 85px;
+    justify-content: space-between;
+
+    padding-block: 28px;
+}
+
+#adoptables-container {
+    flex-direction: column;
+    gap: 80px;
+}
+
+#adoptables-item1 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 32px;
+    border: none;
+    width: 156px;
+    height: 64px;
+    padding-block: 12px;
+    cursor: pointer;
+
+    background-color: #37383F;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+#adoptables-item2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.adoptables-cards {
+    width: 250px;
+    height: 389px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-family: Poppins;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 51.2px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.adoptables-see-more {
+    width: 250px;
+    height: 64px;
+    border-radius: 32px;
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #FF3D9A;
+
+    font-family: Poppins;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+}
