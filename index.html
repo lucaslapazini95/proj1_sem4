@@ -358,29 +358,51 @@
 
     <!-- Adopt modal -->
 
+    <button id="open-adopt-modal">Open Adopt Modal</button>
 
-        <div id="adopt-modal-title">
-            <h1>Apply to Adopt</h1>
-            <p>It takes a few seconds</p>
-        </div>
-        <div id="adopt-modal-infos">
-            <input type="email">
-            <input type="text">
-            <div>
-                <input type="date">
+   <dialog id="adopt-modal-dialog"> <!-- Adicionado id "adopt-modal-dialog" -->
+        <div id="adopt-modal">
+            <div id="adopt-modal-title">
+                <h1>Apply to Adopt</h1>
+                <p>It takes a few seconds</p>
             </div>
-            <div id="adopt-modal-buttons-container">
-                <div></div>
-                <button id="">
-                    <img src="imgs/modals/Icon.png" alt="">
-                </button>
-                <button id="" class="back-button white-highlight">
-                    <img src="imgs/modals/CaretLeft.png" alt="">
-                    <p>Cancel</p>
-                </button>
+    
+            <div id="adopt-modal-infos">
+                <form action="" id="email-form" class="modals-forms pink-highlight">
+                    <label for="email-input">EMAIL<span>*</span></label>
+                    <input type="email" id="email-input" class="input-modals-form" required> <!-- Adicionado "required" -->
+                </form>
+    
+                <form action="" id="full-name-form" class="modals-forms pink-highlight">
+                    <label for="full-name">FULL NAME<span>*</span></label>
+                    <input type="text" id="full-name" class="input-modals-form" required> <!-- Adicionado "required" -->
+                </form>
+    
+                <form action="" id="date-form" class="modals-forms pink-highlight">
+                    <label for="date">DATE OF BIRTH<span>*</span></label>
+                    <input type="date" id="date" class="input-modals-form" required> <!-- Adicionado "required" -->
+                </form>
+    
+                <div id="adopt-modal-buttons-container">
+                    <div id="privacy-policy-container">
+                        <input type="checkbox" id="privacy-policy-checkbox" required> <!-- Adicionado "required" -->
+                        <label for="privacy-policy-checkbox"></label>
+                        <p class="black-highlight">I agree with <span class="pink-highlight">Privacy Policy</span> and <span class="pink-highlight">Terms of Conditions</span></p>
+                    </div>
+    
+                    <button id="wanna-adopt" class="adopt-modal-buttons white-highlight">
+                        <img src="imgs/modals/Icon.png" alt="">
+                        <p>I wanna Adopt!</p>
+                    </button>
+    
+                    <button id="cancel-adopt-modal" class="adopt-modal-buttons white-highlight">
+                        <img src="imgs/modals/CaretLeft.png" alt="">
+                        <p>Cancel</p>
+                    </button>
+                </div>
             </div>
         </div>
-
+    </dialog>
 
     <script src="scripts.js"></script>
 </body>
