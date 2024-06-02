@@ -160,18 +160,23 @@ h {
 
 .donate-button {
     font-family: Poppins;
-    display: flex;
-    width: 181px;
-    height: 64px;
     font-size: 20px;
     color: #fff;
     font-weight: 700;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    width: 181px;
+    height: 64px;
+    
     background-color: #ff3d9a;
     border: #fff;
     padding: 16px 32px;
     border-radius: 32px;
-    align-items: center;
-    gap: 8px;
+
+    cursor: pointer;
 }
 
 /* Blackline separator */
@@ -211,22 +216,27 @@ h {
     gap: 32px;
 }
 
-.adopt-button {
+#adopt-button-us {
     font-family: Poppins;
-    display: flex;
-    flex-wrap: nowrap;
-    text-wrap: nowrap;
-    height: 64px;
-    width: 263px;
     font-size: 20px;
     color: black;
     font-weight: 700;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    
+    height: 64px;
+    width: 263px;
+    
     background-color: #fff;
     border: solid black 2px;
     padding: 16px 32px;
     border-radius: 32px;
-    align-items: center;
-    gap: 10px;
+
+    cursor: pointer;
 }
 
 /* Accomplished Section */
@@ -358,18 +368,23 @@ h {
 
 #adopt-section-button {
     font-family: Poppins;
-    display: flex;
-    width: 217px;
-    height: 64px;
     font-size: 20px;
     color: #fff;
     font-weight: 700;
-    background-color: black;
-    padding: 16px 32px;
-    border-radius: 32px;
+
+    display: flex;
     gap: 8px;
     align-items: center;
     text-wrap: nowrap;
+    
+    width: 217px;
+    height: 64px;
+    
+    background-color: black;
+    padding: 16px 32px;
+    border-radius: 32px;
+
+    cursor: pointer;
 }
 
 /* Difference Section */
@@ -524,13 +539,14 @@ h {
     padding: 16px 32px;
     border-radius: 32px;
     border: solid white 2px;
-    cursor: pointer;
     
     font-family: Poppins;
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
     text-align: center;
+
+    cursor: pointer;
 }
 
 

@@ -1,30 +1,36 @@
-const openButton = document.getElementById('open-adopt-modal');
+// Resgatando o id do adopt modal
 const dialog = document.getElementById('adopt-modal-dialog');
-const cancelButton = document.getElementById('cancel-adopt-modal');
 
-openButton.addEventListener('click', () => {
-    dialog.showModal();
+// Adicione o evento para todos os botões 'adopt-button'
+document.querySelectorAll('.adopt-button').forEach(button => {
+    button.addEventListener('click', () => {
+        dialog.showModal();
+    });
 });
 
+// Botão cancel para fechar os modais
+const cancelButton = document.getElementById('cancel-adopt-modal');
 cancelButton.addEventListener('click', () => {
     dialog.close();
 });
 
+
+// Instruções para centralizar o modal
 function centerModal() {
     const modalWidth = dialog.offsetWidth;
     const modalHeight = dialog.offsetHeight;
 
-    // Calcule as novas posições para centralizar o modal
+    // Calcula as novas posições para centralizar o modal
     const leftPosition = window.innerWidth / 2 - modalWidth / 2;
     const topPosition = window.innerHeight / 2 - modalHeight / 2;
 
-    // Aplique as novas posições
+    // Aplica as novas posições
     dialog.style.left = leftPosition + 'px';
     dialog.style.top = topPosition + 'px';
 }
 
-// Chame a função para centralizar o modal quando a página for carregada
+// Centraliza o modal quando a página for carregada
 centerModal();
 
-// Chame a função para centralizar o modal sempre que o tamanho da janela for alterado
+// Centraliza o modal sempre que o tamanho da janela for alterado
 window.addEventListener('resize', centerModal);
