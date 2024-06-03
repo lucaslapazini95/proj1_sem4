@@ -226,7 +226,7 @@
                         <p class="card-diff-description white-highlight">Provide a forever or temporary 
                             home to a homeless animal.</p>
                     </div>
-                    <button class="card-diff-button background-green">View Adoptables</button>
+                    <a href="adoptables.html" class="card-diff-button background-green black-highlight" style="text-decoration: none;">View Adoptables</a>
                 </div>
                 <div class="card-diff-solo">
                     <div class="card-diff-info">
@@ -234,7 +234,7 @@
                         <p class="card-diff-description white-highlight">We are always in need of passionate 
                             and friendly volunteers.</p>
                     </div>
-                    <button class="card-diff-button background-yellow">Get Involved</button>
+                    <button class="card-diff-button background-yellow black-highlight">Get Involved</button>
                 </div>
                 <div class="card-diff-solo">
                     <div class="card-diff-info">
@@ -242,7 +242,7 @@
                         <p class="card-diff-description white-highlight">Regular donations is a reliable 
                             stream of funds to help sustain.</p>
                     </div>
-                    <button class="card-diff-button background-pink">Give Monthly</button>
+                    <button class="card-diff-button background-pink white-highlight">Give Monthly</button>
                 </div>
                 <div class="card-diff-solo">
                     <div class="card-diff-info">
@@ -250,7 +250,7 @@
                         <p class="card-diff-description white-highlight">Start a fundraiser to raise 
                             funds and help us continue our mission.</p>
                     </div>
-                    <button class="card-diff-button background-purple">Learn More</button>
+                    <button class="card-diff-button background-purple white-highlight">Learn More</button>
                 </div>
             </div>
         </div>
@@ -262,14 +262,13 @@
         <div id="best-friend-container" class="content-container">
             <div id="best-friend-item">
                 <div id="best-friend-title">
-                    <p class="white-highlight text-center">
-                    Find your <span class="yellow-highlight">best friend</span> today!
+                    <p class="white-highlight text-center">Find your <span class="yellow-highlight">best friend</span> today!
                     </p>
                 </div>
                 <div id="best-friend-above-title">
                     <h3 id="above-title-text" class="white-highlight">Browse our adorable adoptables</h3>
                     <div id="best-friend-buttons-container">
-                        <button id="best-friend-adoptables" class="background-yellow black-highlight">View Adoptables</button>
+                        <a href="adoptables.html" id="best-friend-adoptables" class="background-yellow black-highlight" style="text-decoration: none;">View Adoptables</a>
                         <button id="best-friend-adopt" class="background-black white-highlight adopt-button">Apply to Adopt</button>
                     </div>
                 </div>
@@ -354,7 +353,7 @@
 
     <!-- Adopt modal -->
 
-   <dialog id="adopt-modal-dialog"> <!-- Adicionado id "adopt-modal-dialog" -->
+   <!-- <dialog id="adopt-modal-dialog">
         <div id="adopt-modal">
             <div id="adopt-modal-title">
                 <h1>Apply to Adopt</h1>
@@ -364,22 +363,22 @@
             <div id="adopt-modal-infos">
                 <form action="" id="email-form" class="modals-forms pink-highlight">
                     <label for="email-input">EMAIL<span>*</span></label>
-                    <input type="email" id="email-input" class="input-modals-form" required> <!-- Adicionado "required" -->
+                    <input type="email" id="email-input" class="input-modals-form" required>
                 </form>
     
                 <form action="" id="full-name-form" class="modals-forms pink-highlight">
                     <label for="full-name">FULL NAME<span>*</span></label>
-                    <input type="text" id="full-name" class="input-modals-form" required> <!-- Adicionado "required" -->
+                    <input type="text" id="full-name" class="input-modals-form" required>
                 </form>
     
                 <form action="" id="date-form" class="modals-forms pink-highlight">
                     <label for="date">DATE OF BIRTH<span>*</span></label>
-                    <input type="date" id="date" class="input-modals-form" required> <!-- Adicionado "required" -->
+                    <input type="date" id="date" class="input-modals-form" required>
                 </form>
     
                 <div id="adopt-modal-buttons-container">
                     <div id="privacy-policy-container">
-                        <input type="checkbox" id="privacy-policy-checkbox" required> <!-- Adicionado "required" -->
+                        <input type="checkbox" id="privacy-policy-checkbox" required> 
                         <label for="privacy-policy-checkbox"></label>
                         <p class="black-highlight">I agree with <span class="pink-highlight">Privacy Policy</span> and <span class="pink-highlight">Terms of Conditions</span></p>
                     </div>
@@ -396,7 +395,73 @@
                 </div>
             </div>
         </div>
+    </dialog> -->
+
+    <!-- Donate modal -->
+
+    <dialog id="donate-modal-dialog">
+
+        <div id="donate-modal">
+            <h1>Choose your Donate</h1>
+        
+            <div id="donate-modal-info">
+                <form action="" class="donate-modals-forms">
+                    <label for="donate-email-input">EMAIL<span>*</span></label>
+                    <input type="email" id="donate-email-input" class="input-donate-modals-form" required>
+                </form>
+        
+                <form action="" class="donate-modals-forms">
+                    <label for="money-input">HOW MUCH CAN YOU HELP?<span>*</span></label>
+                    <div class="input-container">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="currencyInput" class="input-donate-modals-form" step="0.01" min="0" placeholder="0.00" required>
+                    </div>
+                </form>
+
+                <form action="" class="donate-modals-forms payment-methods-form">
+                    <label for="payment-method">PAYMENT METHOD<span>*</span></label>
+                    <div class="payment-methods-container">
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="pix">
+                            <div class="payment-method-box">
+                                <span>PIX</span>
+                                <div class="radio-circle"></div>
+                            </div>
+                        </label>
+
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="credit-card">
+                            <div class="payment-method-box">
+                                <span>Credit Card</span>
+                                <div class="radio-circle"></div>
+                            </div>
+                        </label>
+
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="bank-transfer">
+                            <div class="payment-method-box">
+                                <span>Bank Transfer</span>
+                                <div class="radio-circle"></div>
+                            </div>
+                        </label>
+
+                    </div>
+                </form>
+
+                <button id="help-donate-button" class="donate-modal-buttons white-highlight background-pink">
+                    <img src="imgs/modals/icon_heart_button.png" alt="">
+                    <p>I wanna Help!</p>
+                </button>
+
+                <button id="cancel-donate-button" class="donate-modal-buttons white-highlight">
+                    <img src="imgs/modals/CaretLeft.png" alt="">
+                    <p>Cancel</p>
+                </button>
+
+            </div>
+        </div>
     </dialog>
+    
 
     <script src="scripts.js"></script>
 </body>

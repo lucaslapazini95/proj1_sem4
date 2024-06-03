@@ -8,8 +8,10 @@
 
 section, header, footer {
     width: 100%;
+    
     padding-inline: 40px;
     padding-block: 80px;
+    
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -118,6 +120,7 @@ h {
     font-size: 20px;
     font-weight: 700;
     color: #1E1F27;
+    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -130,6 +133,7 @@ h {
     font-size: 20px;
     font-weight: 700;
     color: #1E1F27;
+    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -150,6 +154,7 @@ h {
 .phone-container {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 1rem;
 }
 
@@ -178,8 +183,6 @@ h {
 
     cursor: pointer;
 }
-
-/* Blackline separator */
 
 
 /* About Us Section */
@@ -317,8 +320,10 @@ h {
     line-height: 51.2px;
     letter-spacing: -0.02em;
     text-align: center;
+    
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
@@ -468,7 +473,6 @@ h {
     width: 100%;
     height: 64px;
 
-    /* padding: 16px 24px; */
     padding-block: 16px;
     border-radius: 16px;
     border: none;
@@ -870,7 +874,7 @@ h {
     text-align: left;
 }
 
-.modals-forms > span {
+.modals-forms > label > span {
     color: #3F96FC;
 }
 
@@ -975,4 +979,207 @@ h {
 #cancel-adopt-modal {
     background-color: #37383F;
     color: white;
+}
+
+/* Donate modal */
+
+#donate-modal-dialog {
+    width: 480px;
+    height: 798px;
+    padding: 32px;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#donate-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+#donate-modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.donate-modals-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 100%;
+}
+
+.donate-modals-forms > label {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: #FF3D9A;
+}
+
+.donate-modals-forms > label > span {
+    color: #3F96FC;
+}
+
+.input-donate-modals-form {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    padding-left: 36px;
+    border-radius: 8px;
+    border: solid #937AFF 1px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+}
+
+.currency-symbol {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Abram alas para o maldito radio */
+.payment-methods-form {
+    gap: 16px;
+}
+
+.payment-methods-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-method {
+    flex: 1;
+}
+
+.payment-method input {
+    display: none;
+}
+
+.payment-method-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #3F96FC;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.payment-method-box span {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.radio-circle {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 99%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.radio-circle::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+
+    border-radius: 99%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.payment-method input:checked + .payment-method-box {
+    background-color: #3F96FC;
+    border-color: #3F96FC;
+    color: #fff;
+}
+
+.payment-method input:checked + .payment-method-box span {
+    color: #fff;
+}
+
+.payment-method input:checked + .payment-method-box .radio-circle {
+    background-color: #FF3D9A;
+}
+
+.payment-method input:checked + .payment-method-box .radio-circle::after {
+    background-color: #FF3D9A;
+    content: '✔';
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Termino da saga do radio button */
+
+.donate-modal-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 32px;
+    border: none;
+    padding-block: 16px;
+
+    height: 64px;
+
+    cursor: pointer;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+.donate-modal-buttons > img {
+    width: 32px;
+    height: 32px;
+}
+
+#help-donate-button {
+    width: 249px;
+}
+
+#cancel-donate-button {
+    width: 177px;
+    background-color: #37383F;
 }
