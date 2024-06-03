@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <!-- Header -->
 
     <header id="header-section">
-
         <div id="header-adoptables" class="content-container">
-
             <div class="header-item1">
                 <img src="./imgs/main_page/logo_solo.png" alt="">
                 <div class="header-menus">
@@ -32,7 +26,6 @@
                     <p>Events</p>
                 </div>
             </div>
-
             <div class="header-item2">
                 <div class="phone-container">
                     <img src="imgs/main_page/icon_phone.png" alt="" class="phone-icon">
@@ -49,7 +42,6 @@
     <!-- Adoptables -->
 
     <section id="adoptables-section" class="background-black">
-
         <div id="adoptables-container" class="content-container">
             <div id="adoptables-item1">
                 <a href="index.html" class="back-button white-highlight" style="text-decoration: none;">
@@ -58,7 +50,6 @@
                 </a>
                 <h2>Our Adoptable Pets</h2>
             </div>
-
             <div id="adoptables-item2">
                 <div class="adoptables-cards">
                     <img src="imgs/adoptables/to_go_web/bob.png" alt="">
@@ -125,9 +116,7 @@
                     </button>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <!-- Footer -->
@@ -191,36 +180,29 @@
                 <h1>Apply to Adopt</h1>
                 <p>It takes a few seconds</p>
             </div>
-
             <div id="adopt-modal-infos">
                 <form action="" id="email-form" class="modals-forms pink-highlight">
-                    <label for="email-input">EMAIL<span>*</span></label>
-                    <input type="email" id="email-input" class="input-modals-form" required>
+                    <label for="adopt-email-input">EMAIL<span>*</span></label>
+                    <input type="email" id="adopt-email-input" class="input-modals-form" required>
                 </form>
-
                 <form action="" id="full-name-form" class="modals-forms pink-highlight">
                     <label for="full-name">FULL NAME<span>*</span></label>
                     <input type="text" id="full-name" class="input-modals-form" required>
                 </form>
-
                 <form action="" id="date-form" class="modals-forms pink-highlight">
                     <label for="date">DATE OF BIRTH<span>*</span></label>
                     <input type="date" id="date" class="input-modals-form" required>
                 </form>
-
                 <div id="adopt-modal-buttons-container">
                     <div id="privacy-policy-container">
                         <input type="checkbox" id="privacy-policy-checkbox" required>
                         <label for="privacy-policy-checkbox"></label>
-                        <p class="black-highlight">I agree with <span class="pink-highlight">Privacy Policy</span> and
-                            <span class="pink-highlight">Terms of Conditions</span></p>
+                        <p class="black-highlight">I agree with <span class="pink-highlight">Privacy Policy</span> and <span class="pink-highlight">Terms of Conditions</span></p>
                     </div>
-
                     <button id="wanna-adopt" class="adopt-modal-buttons white-highlight">
                         <img src="imgs/modals/Icon.png" alt="">
                         <p>I wanna Adopt!</p>
                     </button>
-
                     <button id="cancel-adopt-modal" class="adopt-modal-buttons white-highlight">
                         <img src="imgs/modals/CaretLeft.png" alt="">
                         <p>Cancel</p>
@@ -233,16 +215,13 @@
     <!-- Donate modal -->
 
     <dialog id="donate-modal-dialog">
-
         <div id="donate-modal">
             <h1>Choose your Donate</h1>
-
             <div id="donate-modal-info">
                 <form action="" class="donate-modals-forms">
                     <label for="donate-email-input">EMAIL<span>*</span></label>
                     <input type="email" id="donate-email-input" class="input-donate-modals-form" required>
                 </form>
-
                 <form action="" class="donate-modals-forms">
                     <label for="money-input">HOW MUCH CAN YOU HELP?<span>*</span></label>
                     <div class="input-container">
@@ -251,7 +230,6 @@
                             placeholder="0.00" required>
                     </div>
                 </form>
-
                 <form action="" class="donate-modals-forms payment-methods-form">
                     <label for="payment-method">PAYMENT METHOD<span>*</span></label>
                     <div class="payment-methods-container">
@@ -262,7 +240,6 @@
                                 <div class="radio-circle"></div>
                             </div>
                         </label>
-
                         <label class="payment-method">
                             <input type="radio" name="payment-method" value="credit-card">
                             <div class="payment-method-box">
@@ -270,7 +247,6 @@
                                 <div class="radio-circle"></div>
                             </div>
                         </label>
-
                         <label class="payment-method">
                             <input type="radio" name="payment-method" value="bank-transfer">
                             <div class="payment-method-box">
@@ -278,24 +254,19 @@
                                 <div class="radio-circle"></div>
                             </div>
                         </label>
-
                     </div>
                 </form>
-
                 <button id="help-donate-button" class="donate-modal-buttons white-highlight background-pink">
                     <img src="imgs/modals/icon_heart_button.png" alt="">
                     <p>I wanna Help!</p>
                 </button>
-
                 <button id="cancel-donate-button" class="donate-modal-buttons white-highlight">
                     <img src="imgs/modals/CaretLeft.png" alt="">
                     <p>Cancel</p>
                 </button>
-
             </div>
         </div>
     </dialog>
-
     <script src="scripts.js"></script>
 </body>
 

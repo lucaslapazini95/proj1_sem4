@@ -184,7 +184,6 @@ h {
     cursor: pointer;
 }
 
-
 /* About Us Section */
 
 #us-section {
@@ -243,7 +242,6 @@ h {
 }
 
 /* Accomplished Section */
-
 
 #accomplished-container {
     flex-direction: column;
@@ -402,9 +400,6 @@ h {
 .diff-item1 {
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap;
-    align-content: space-around;
-    gap: 110px; */
     position: relative;
 }
 
@@ -501,6 +496,7 @@ h {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
     font-family: Poppins;
     font-size: 56px;
     font-weight: 700;
@@ -552,7 +548,6 @@ h {
 
     cursor: pointer;
 }
-
 
 /* Newsletter Section */
 
@@ -812,7 +807,6 @@ h {
 
 /* Adopt modal */
 
-/* Estilos para o próprio dialog */
 #adopt-modal-dialog {
     width: 448px;
     height: 686px;
@@ -879,7 +873,7 @@ h {
 }
 
 .input-modals-form {
-    width: 100%; /* Ajustado para 100% para se ajustar ao contêiner */
+    width: 100%;
     height: 56px;
     padding: 16px;
     border-radius: 8px;
@@ -911,7 +905,7 @@ h {
     display: none;
 }
 
-/* Estiliza o label para parecer um botão */
+/* Estilo de label pra paracer um botão */
 #privacy-policy-container > label {
     width: 24px;
     height: 24px;
@@ -954,7 +948,7 @@ h {
 
     border-radius: 8px;
     border: none;
-    width: 100%; /* Ajustado para 100% para se ajustar ao contêiner */
+    width: 100%;
     height: 64px;
     cursor: pointer;
 
@@ -1190,17 +1184,23 @@ h {
 
 /* Teste Carousel */
 
-.wraper {
+.wrapper {
     max-width: 1100px;
     width: 100%;
 }
 
-.wraper .carousel {
+.wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
     gap: 16px;
     /* overflow: hidden; */
+}
+
+.carousel :where(.card, .img) .carousel .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel .card {
@@ -1213,6 +1213,13 @@ h {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.card .img {
+    background: #8b53ff;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
 }
 
 .card .img img {
