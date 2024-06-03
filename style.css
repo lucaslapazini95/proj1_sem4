@@ -1005,6 +1005,10 @@ h {
     gap: 48px;
 }
 
+#donate-modal > h1 {
+    text-align: center;
+}
+
 #donate-modal-info {
     display: flex;
     flex-direction: column;
@@ -1182,4 +1186,38 @@ h {
 #cancel-donate-button {
     width: 177px;
     background-color: #37383F;
+}
+
+/* Teste Carousel */
+
+.wraper {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.wraper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    /* overflow: hidden; */
+}
+
+.carousel .card {
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    padding-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
 }

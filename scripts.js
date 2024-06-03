@@ -11,8 +11,8 @@ document.querySelectorAll(".adopt-button").forEach((button) => {
 });
 
 // Botão cancel para fechar o modal
-const cancelButton = document.getElementById("cancel-adopt-modal");
-cancelButton.addEventListener("click", () => {
+const cancelAdoptButton = document.getElementById("cancel-adopt-modal");
+cancelAdoptButton.addEventListener("click", () => {
     adoptDialog.close();
 });
 
@@ -21,7 +21,7 @@ cancelButton.addEventListener("click", () => {
 
 // Instruções para centralizar o adopt modal
 
-function centerModal() {
+function centerAdoptModal() {
   let modalWidth = adoptDialog.offsetWidth;
   let modalHeight = adoptDialog.offsetHeight;
 
@@ -35,10 +35,10 @@ function centerModal() {
 }
 
 // Centraliza o modal quando a página for carregada
-centerModal();
+centerAdoptModal();
 
 // Centraliza o modal sempre que o tamanho da janela for alterado
-window.addEventListener("resize", centerModal);
+window.addEventListener("resize", centerAdoptModal);
 
 
 
@@ -87,8 +87,8 @@ document.querySelectorAll(".donate-button").forEach((button) => {
 });
 
 // Botão cancel para fechar o modal
-const cancelDonate = document.getElementById("cancel-donate-button");
-cancelDonate.addEventListener("click", () => {
+const cancelDonateButton = document.getElementById("cancel-donate-button");
+cancelDonateButton.addEventListener("click", () => {
     donateDialog.close();
 });
 
@@ -157,8 +157,8 @@ helpDonateButton.addEventListener('click', () => {
 function isValidEmail(email) {
     // Implemente sua lógica de validação de email aqui
     // Esta é apenas uma verificação básica
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regexEmail.test(email);
 }
 
 // Função para verificar se a quantidade é válida
