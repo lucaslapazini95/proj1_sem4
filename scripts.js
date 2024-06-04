@@ -17,19 +17,36 @@ cancelAdoptButton.addEventListener("click", () => {
 
 //Validando o adopt modal
 
-//Resgatando infos
+function isValidEmail(email) {
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return email !== "" && regexEmail.test(email);
+}
+
 const wannaAdoptButton = document.getElementById("wanna-adopt");
-const privacyCheckbox = document.getElementById("privacy-policy-checkbox");
-const adoptEmailInput = document.getElementById("adopt-email-input");
-const fullNameInput = document.getElementById("full-name");
-const dateInput = document.getElementById("date");
 
 wannaAdoptButton.addEventListener("click", () => {
-  if (privacyCheckbox.checked && adoptEmailInput.value.trim() !== "" && fullNameInput.value.trim() !== "" && dateInput.value.trim() !== "") {
-    window.location.href = "sucess.html";
-  } else {
-    alert("Please fill out all the required fields and check the privacy checkbox.");
+  const privacyCheckbox = document.getElementById("privacy-policy-checkbox");
+  const adoptEmailInput = document.getElementById("adopt-email-input").value.trim();
+  const fullNameInput = document.getElementById("full-name").value.trim();
+  const dateInput = document.getElementById("date").value.trim();
+
+  if (!privacyCheckbox.checked) {
+    alert("Please check the privacy checkbox.");
+    return;
   }
+  if (!isValidEmail(adoptEmailInput)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+  if (fullNameInput === "") {
+    alert("Please enter your full name.");
+    return;
+  }
+  if (dateInput === "") {
+    alert("Please enter a valid date.");
+    return;
+  }
+  window.location.href = "sucess.html";
 });
 
 //Abrindo o donate modal
@@ -49,12 +66,25 @@ cancelDonateButton.addEventListener("click", () => {
 
 //Validando o donate modal - vou testar esse método de verificação para o adopt modal
 
-// Seleciona somente o botão de submissão
+function isValidAmount(amount) {
+  return parseFloat(amount) > 0;
+}
+
+function isPaymentMethodSelected(inputs) {
+  for (const input of inputs) {
+    if (input.checked) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Nesse caso, ele seleciona somente o botão de submissão, diferente do meu modal, que selecionei todas variáveis previamente
 const helpDonateButton = document.getElementById('help-donate-button');
 
 helpDonateButton.addEventListener('click', () => {
-  const donateEmailInput = document.getElementById('donate-email-input').value;
-  const amountInput = document.getElementById('currencyInput').value;
+  const donateEmailInput = document.getElementById('donate-email-input').value.trim();
+  const amountInput = document.getElementById('currencyInput').value.trim();
   const paymentMethodInputs = document.querySelectorAll('input[name="payment-method"]');
   if (!isValidEmail(donateEmailInput)) {
     alert('Please enter a valid email address.');
@@ -71,24 +101,6 @@ helpDonateButton.addEventListener('click', () => {
   window.location.href = 'sucess.html';
 });
 
-function isValidEmail(email) {
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regexEmail.test(email);
-}
-
-function isValidAmount(amount) {
-  return parseFloat(amount) > 0;
-}
-
-function isPaymentMethodSelected(inputs) {
-  for (const input of inputs) {
-    if (input.checked) {
-      return true;
-    }
-  }
-  return false;
-}
-
 //Validação de email da newsletter
 
 const newsletterForm = document.getElementById("newsletter-form");
@@ -96,8 +108,7 @@ const emailBoxNewsletter = document.getElementById("email-box-newsletter");
 
 newsletterForm.addEventListener("submit", (event) => {
   event.preventDefault(); // Previne o envio padrão do formulário
-  // Verifica se o campo de e-mail está preenchido e é válido
-  if (emailBoxNewsletter.value.trim() !== "" && emailBoxNewsletter.checkValidity()) {
+  if (emailBoxNewsletter.value.trim() !== "" && isValidEmail(emailBoxNewsletter.value.trim())) {
     window.location.href = "sucess.html";
   } else {
     alert("Please enter a valid email address.");
