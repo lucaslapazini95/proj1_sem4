@@ -204,6 +204,12 @@ h {
     gap: 48px;
 }
 
+#us-item-first-line {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 #us-description {
     font-family: Inter;
     font-size: 24px;
@@ -261,6 +267,12 @@ h {
     gap: 40px;
 }
 
+.accomplished-solo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .accomplished-values {
     gap: 40px;
 }
@@ -307,7 +319,9 @@ h {
     border: solid white 2px;
     border-radius: 24px;
     opacity: 0px;
-    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .card-title-icon {
@@ -349,7 +363,7 @@ h {
     align-content: space-around;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
     max-width: 1208px;
 }
 
@@ -367,6 +381,10 @@ h {
     font-weight: 500;
     line-height: 38.4px;
     text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 #adopt-section-button {
@@ -484,12 +502,29 @@ h {
 
 #best-friend-container{
     justify-content: center;
+    position: relative
 }
 
 #best-friend-item {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    position: relative;
+}
+
+#best-friend-cat {
+    position: absolute;
+    top: 57.2%;
+    transform: translateY(-50%);
+    left: -35%
+}
+
+#best-friend-dog {
+    position: absolute;
+    top: 57.2%;
+    transform: translateY(-50%);
+    right: -35%;
+
 }
 
 #best-friend-title {
@@ -636,6 +671,47 @@ h {
     flex-direction: row;
     justify-content: space-between;
     gap: 40px;
+}
+
+#footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+#footer-logo-container > img {
+    width: 93.43px;
+    height: 93.86px;
+}
+
+#footer-forever-homes > p {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+}
+
+#homes-plus-heart {
+    display: flex;
+    flex: row;
+}
+
+#homes-plus-heart > p{
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+}
+
+#footer-logo-container > p {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+
 }
 
 .footer-column {
@@ -1184,47 +1260,107 @@ h {
 
 /* Teste Carousel */
 
-.wrapper {
+/* .wrapper {
     max-width: 1100px;
     width: 100%;
+    position: relative;
+}
+.wrapper i {
+top: 50%;
+height: 50px;
+width: 50px;
+cursor: pointer;
+font-size: 1.25rem;
+position: absolute;
+text-align: center;
+line-height: 50px;
+background: #fff;
+border-radius: 50%;
+box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+transform: translateY(-50%);
+transition: transform 0.1s linear;
 }
 
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    /* overflow: hidden; */
+.wrapper i:active{
+transform: translateY(-50%) scale(0.85);
 }
 
-.carousel :where(.card, .img) .carousel .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.wrapper i:first-child{
+left: -22px;
+}
+
+.wrapper i:last-child{
+right: -22px;
+}
+
+.wrapper .carousel{
+display: grid;
+grid-auto-flow: column;
+grid-auto-columns: calc((100% / 3) - 12px);
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+gap: 16px;
+border-radius: 8px;
+scroll-behavior: smooth;
+scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+display: none;
+}
+
+.carousel.no-transition {
+scroll-behavior: auto;
+}
+
+.carousel.dragging {
+scroll-snap-type: none;
+scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+cursor: grab;
+user-select: none;
+}
+
+.carousel :where(.card, .img) {
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .carousel .card {
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    padding-bottom: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+scroll-snap-align: start;
+height: 342px;
+list-style: none;
+background: #fff;
+cursor: pointer;
+padding-bottom: 15px;
+flex-direction: column;
+border-radius: 8px;
 }
 
-.card .img {
-    background: #8b53ff;
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
+.carousel .card .img {
+background: #8B53FF;
+height: 148px;
+width: 148px;
+border-radius: 50%;
 }
 
 .card .img img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
+width: 140px;
+height: 140px;
+border-radius: 50%;
+object-fit: cover;
+border: 4px solid #fff;
 }
+
+@media screen and (max-width: 900px) {
+.wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+}}
+
+@media screen and (max-width: 600px) {
+.wrapper .carousel {
+    grid-auto-columns: 100%;
+}} */

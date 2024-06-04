@@ -14,7 +14,6 @@ Atráves de um modelo desenvolvido no Figma, os alunos do Programa de Bolsas dev
 │   scripts.js
 │   style.css
 │   sucess.html
-│   tree.txt
 │
 └───imgs
     ├───adoptables
@@ -71,6 +70,8 @@ Atráves de um modelo desenvolvido no Figma, os alunos do Programa de Bolsas dev
     │       adoption-cat-dog.png
     │       best_friend_cat.png
     │       best_friend_dog.png
+    │       footer-heart-logo.png
+    │       footer-logo-solo.png
     │       footer_logo.png
     │       house_drawing.png
     │       icon_adress.png
